@@ -1,6 +1,6 @@
 # ECOMMERCE_LESS
 -Ecommerce feito em HTML, CSS e JS puro
--integrado ao backende en linguagem JAVA e banco de dados MySql 
+-Backend em linguagem JAVA e banco de dados MySql 
 -Cadastro de produtos
 -Cadastro de Clientes
 -Adição de produtos no carrinho 

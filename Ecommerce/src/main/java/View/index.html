@@ -1,0 +1,111 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Ecommerce-Less</title>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body onload="carregar()">
+    <header>
+        <div class="barra">
+            <h1>Ecommerce Less</h1>
+            <a href=Cadastro_Cliente.html><font color=white>Minha_Conta</font></a>
+        </div>
+    </header>
+    
+    <hr> 
+    <h3 id="H3_INDEX">Seleção de produtos</h3>
+    <hr>
+    <div id="produtos">
+
+    </div><!--produtos-->
+
+    <h2>Carrinho:</h2>
+
+    <div id="carrinho">
+
+    </div><!--carrinho-->
+
+    <script>
+        const items = [
+            {
+                id: 0,
+                nome: 'Como treinar seu Dragão',
+                img: 'image.jpg',
+                quantidade: 0
+            },
+         
+        ]
+
+
+        inicializarLoja = () => {
+            var containerProdutos = document.getElementById('produtos');
+            items.map((val)=>{
+               containerProdutos.innerHTML+= `
+               
+               <div class="produto-single">
+                    <img src="`+val.img+`" />
+                    <p>`+val.nome+`</p>
+                    <a key="`+val.id+`" href="#">Adicionar ao carrinho!<a/>
+                </div>
+
+               
+               `;
+            })
+        }
+
+        inicializarLoja();
+
+
+        atualizarCarrinho = () => {
+           var containerCarrinho = document.getElementById('carrinho');
+           containerCarrinho.innerHTML = "";
+            items.map((val)=>{
+                if(val.quantidade > 0){
+               containerCarrinho.innerHTML+= `
+               
+               <p>`+val.nome+` | quantidade: `+val.quantidade+`</p>
+               <hr>
+
+               
+               `;
+                }
+            })
+        }
+
+
+        var links = document.getElementsByTagName('a');
+
+        for(var i = 0; i < links.length; i++){
+            links[i].addEventListener("click",function(){
+                let key = this.getAttribute('key');
+                items[key].quantidade++;
+                atualizarCarrinho();
+                return false;
+            })
+        }
+       
+
+
+    </script>
+
+    <!-- 
+     <main>
+        <div>
+            <input type="checkbox" id="scales" name="scales" checked>
+            <label for="scales">Scales</label>
+          </div>
+      
+          <div>
+            <input type="checkbox" id="horns" name="horns">
+            <label for="horns">Horns</label>
+          </div>
+      </fieldset>
+</main> -->
+
+<script type="text/javascript" src="javascript.js"></script>  
+
+</body>
+</html>

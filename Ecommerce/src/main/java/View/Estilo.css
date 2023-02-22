@@ -1,0 +1,83 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.a{
+  color: white;  
+  height: 30px;
+}
+/* deixa o head com uma margem  */
+main{
+  padding: 5%;
+}
+.H3_INDEX{
+  padding: 0%;
+}
+
+/* Barra superior */
+.barra{
+  justify-content: space-between;
+  display: flex;
+  align-items: center; 
+  background: #8d0013;
+  color: rgba(255, 255, 255, 0.97);
+}
+/* deixa a barra com os icones dde cada lado  */
+.barra :first-child{    /* icone info */
+  padding-left: 5%;
+}
+
+.barra :last-child{   /* icone voltar */
+  padding-right: 5%;
+}
+
+/* divide ao meio */
+.input-container2{
+  float:left;
+ 
+
+}
+.input-container3{
+  float:left;
+
+}
+.cadastro select,
+.cadastro input{
+  height: 30px;
+  width: 90%;
+  border-radius: 10px;
+  margin-bottom: 35px; 
+  font-size: 16px;
+  border: 1px solid;
+  outline: none;
+}
+
+.table{
+
+  width: 90%;
+}
+
+#nascimento{
+  flex-direction: row; 
+}
+.cadastro form :nth-child(6){
+  
+  height: 60px;
+  flex-direction: column;
+  width: 20%;
+  grid-area: nascimento;
+}
+
+
+.button-container-button{
+  display: inline-block;
+}
+
+#btnsalvar{
+  margin-right: 9.5rem;
+}
+
+/*MENU LATERAL */
